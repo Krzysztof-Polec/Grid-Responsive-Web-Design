@@ -71,5 +71,106 @@ img {
   display: -ms-grid;
   display: grid;
   gap: 20px;
+      grid-template-areas: "main-area main-area top-box-a" "main-area main-area top-box-b";
+}
+
+.wrapper .top-header .main-area {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: main-area;
+  min-height: 400px;
+  background-image: url("basketball.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-shadow: rgba(104, 104, 104, 0.8);
+          box-shadow: rgba(104, 104, 104, 0.8);
+}
+
+.wrapper .top-header .main-area h1 {
+  font-size: 3.5rem;
+  margin-top: 0;
+  color: #fff;
+}
+
+.wrapper .top-header .main-area p {
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  color: #fff;
+}
+
+.wrapper .top-header .main-area a {
+  margin-top: 35px;
+}
+
+.wrapper .top-header .top-box {
+  background-color: #ddd;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: rgba(104, 104, 104, 0.8);
+          box-shadow: rgba(104, 104, 104, 0.8);
+  padding: 1.5rem;
+}
+
+.wrapper .top-header .top-box .price {
+  font-size: 2.0rem;
+}
+
+.wrapper .top-header .top-box-a {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: top-box-a;
+}
+
+.wrapper .top-header .top-box-b {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: top-box-b;
+}
+
+.wrapper .boxes {
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.wrapper .boxes .box {
+  background-color: #ddd;
+  text-align: center;
+  padding: 1.5rem 2.0rem;
+  -webkit-box-shadow: rgba(104, 104, 104, 0.8);
+          box-shadow: rgba(104, 104, 104, 0.8);
+}
+
+.wrapper .boxes .box h3 {
+  margin: 15px 0px;
+}
+
+.wrapper .boxes .box svg {
+  width: 40px;
+  fill: crimson;
 }
 /*# sourceMappingURL=style.css.map */
