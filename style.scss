@@ -4,7 +4,10 @@ $primary: #ddd;
 $dark: #333;
 $light: #fff;
 $colour: crimson;
-$shadow: rgba(104, 104, 104, 0.8);
+$shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+$font-size-multipler: 1;
+
+
 
 // GLOBAL STYLES //
 
@@ -67,13 +70,15 @@ img{
                 text-align: center;
                 color: $dark;
                 text-transform: uppercase;
+                // font-size: calc($font-size-multipler)*1.1rem;
                 font-size: 1.1rem;
                 box-shadow: $shadow;
+                transition: 0.2s;
+                transition-timing-function: ease-in-out;
 
                 &:hover{
                     background-color: $dark;
                     color: $light;
-                    transition: 0.4s;
                 }
             }
         }
@@ -100,12 +105,14 @@ img{
             box-shadow: $shadow;
 
             h1{
+                // font-size: calc($font-size-multipler)*3.5rem;
                 font-size: 3.5rem;
                 margin-top: 0;
                 color: $light;
             }
 
             p{
+                // font-size: calc($font-size-multipler)*1.3rem;
                 font-size: 1.3rem;
                 margin-bottom: 0;
                 color: $light;
@@ -126,6 +133,7 @@ img{
 
             .price{
                 font-size: 2.0rem;
+                // font-size: calc($font-size-multipler)*2.0rem;
             }
         }
 
@@ -159,4 +167,63 @@ img{
             }
         }
     }
+
+    .info{
+        background-color: $primary;
+        box-shadow: $shadow;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(2,1fr);
+        padding: 3rem;
+
+        p{
+            margin-bottom: 25px;
+        }
+    }
+
+    .portfolio{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+
+        img{
+            width: 100%;
+            box-shadow: $shadow;
+        }
+    }
+
+    footer{
+        margin-top: 2rem;
+        background: $dark;
+        color: $light;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 960px){
+    .top-header{
+        grid-template-areas: 
+            "main-area main-area"
+            "top-box-a top-box-b" !important;
+    }
+}
+
+@media (max-width: 500px){
+    .top-header{
+        grid-template-areas: 
+            "main-area"
+            "top-box-a"
+            "top-box-b" !important;
+    }
+
+    .main-nav{
+        ul{
+            grid-template-columns: 1fr !important;
+        }
+    }
+    .info{
+        grid-template-columns: 1fr !important;    
+    }
+
 }

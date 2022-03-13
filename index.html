@@ -9,6 +9,9 @@
 </head>
 <body>
     <div class="wrapper">
+        <input type="button" value="+" id="inc">
+        <input type="button" value="-" id="dec">
+
         <nav class="main-nav">
             <ul>
                 <li><a href="#">Start</a></li>
@@ -77,11 +80,13 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, harum!</p>
             </div>
         </section>
-        <!-- <section class="info">
+        <section class="info">
             <img src="info.jpg">
-            <h2>System Analityki Statystycznej</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aperiam, voluptatem dignissimos provident ex ullam rem enim excepturi optio</p>
-            <a href="#" class="btn">Szczegóły...</a>
+            <div>
+                <h2>System Analityki Statystycznej</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur aperiam, voluptatem dignissimos provident ex ullam rem enim excepturi optio</p>
+                <a href="#" class="btn">Szczegóły...</a>
+            </div>
         </section>
         <section class="portfolio">
             <img src="https://source.unsplash.com/random/200x200">
@@ -97,7 +102,34 @@
         </section>
         <footer>
             <p>Copyright &copy;2022 1CT ZST Rzeszów</p>
-        </footer> -->
+        </footer>
     </div>
+    <script>
+        function setFontSize(e){
+            const actionObj = e.target.value;
+
+            const rootNode = document.querySelector(":root");
+            const rootNodeStyle = getComputedStyle(rootNode);
+            const aSize = parseFloat(rootNodeStyle.getPropertyValue("--font-size-multipler"));
+            if((actionObj == "+") && (aSize <= 1.8)){
+                aSize += 0.2;
+                rootNode.style.setProperty("--font-size-multipler", aSize);
+            }else if(aSize > 1.0){
+                aSize -= 0.2;
+                rootNode.style.setProperty("--font-size-multipler", aSize);
+            }
+        }
+
+        const gplus = document.querySelector('#inc');
+        const gminus = document.querySelector('#dec');
+
+        gplus.addEventListener("click", ()=> {
+            setFontSize(event);
+        });
+
+        gminus.addEventListener("click", ()=> {
+            setFontSize(event);
+        });
+    </script>
 </body>
 </html>
