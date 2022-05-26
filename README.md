@@ -10,4 +10,4 @@ My personal website - Grid Responsive Web Design
 
 ## Demo
 
-Project Link: []()
+Project Link: [https://krzysztof-polec.github.io/Grid-Responsive-Web-Design/](https://krzysztof-polec.github.io/Grid-Responsive-Web-Design/)
