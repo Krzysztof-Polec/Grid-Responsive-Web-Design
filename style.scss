@@ -5,7 +5,6 @@ $dark: #333;
 $light: #fff;
 $colour: crimson;
 $shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
-$font-size-multipler: 1;
 
 
 
@@ -70,7 +69,6 @@ img{
                 text-align: center;
                 color: $dark;
                 text-transform: uppercase;
-                // font-size: calc($font-size-multipler)*1.1rem;
                 font-size: 1.1rem;
                 box-shadow: $shadow;
                 transition: 0.2s;
@@ -105,14 +103,12 @@ img{
             box-shadow: $shadow;
 
             h1{
-                // font-size: calc($font-size-multipler)*3.5rem;
                 font-size: 3.5rem;
                 margin-top: 0;
                 color: $light;
             }
 
             p{
-                // font-size: calc($font-size-multipler)*1.3rem;
                 font-size: 1.3rem;
                 margin-bottom: 0;
                 color: $light;
@@ -133,7 +129,6 @@ img{
 
             .price{
                 font-size: 2.0rem;
-                // font-size: calc($font-size-multipler)*2.0rem;
             }
         }
 
